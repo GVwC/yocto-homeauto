@@ -1,0 +1,13 @@
+[Unit]
+Description=Home Assistant
+After=docker.service
+Requires=docker.service
+
+[Service]
+Restart=always
+ExecStart=/usr/bin/docker run --name homeassistant --net=host --privileged \
+  -v /etc/homeassistant:/config \
+  ghcr.io/home-assistant/home-assistant:stable
+
+[Install]
+WantedBy=multi-user.target

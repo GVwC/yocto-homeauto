@@ -1,0 +1,10 @@
+build/
+tmp/
+downloads/
+sstate-cache/
+.cache/
+*.swp
+*.sdimg
+*.wic
+*.tar.bz2
+*.log
