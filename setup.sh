@@ -8,7 +8,7 @@ echo "📦 Yocto Home Automation Environment Setup"
 REQUIRED_PACKAGES=(
   gawk wget git diffstat unzip texinfo gcc g++ build-essential chrpath socat
   cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping
-  python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm zstd
+  python3-git python3-jinja2 libsdl1.2-dev pylint xterm zstd
   locales curl bzip2 make rpcsvc-proto
 )
 
