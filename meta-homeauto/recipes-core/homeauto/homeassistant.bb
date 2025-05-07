@@ -1,21 +1,20 @@
-SUMMARY = "Install and run Home Assistant as a Docker container"
-DESCRIPTION = "This recipe sets up Home Assistant to run in a Docker container"
+# meta-homeauto/recipes-core/systemd/homeassistant/homeassistant.bb
+
+SUMMARY = "Runs Home Assistant container on system boot"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://README.md;md5=8e5c7c0d343d9021ecba1b1bdbbbf90f"
+LIC_FILES_CHKSUM = "file://homeassistant.service;md5=154e3903ae8e6d22d604f48d0f179f83"
 
-DEPENDS = "docker-moby"
-
-inherit systemd
-
-SRC_URI = ""
+SRC_URI += "file://homeassistant.service"
 
 S = "${WORKDIR}"
 
-do_install() {
-    install -d ${D}${sysconfdir}/systemd/system
-    install -m 0644 ${WORKDIR}/homeassistant.service ${D}${sysconfdir}/systemd/system/
-}
+inherit systemd
 
-FILES:${PN} += "${sysconfdir}/systemd/system/homeassistant.service"
 SYSTEMD_SERVICE:${PN} = "homeassistant.service"
 
+do_install() {
+    install -d ${D}${systemd_system_unitdir}
+    install -m 0644 ${WORKDIR}/homeassistant.service ${D}${systemd_system_unitdir}/
+}
+
+FILES:${PN} += "${systemd_system_unitdir}"
