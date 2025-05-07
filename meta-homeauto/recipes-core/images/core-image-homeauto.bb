@@ -21,3 +21,5 @@ ROOTFS_POSTPROCESS_COMMAND:append = " create_homeassistant_config_dir; "
 create_homeassistant_config_dir() {
     mkdir -p ${IMAGE_ROOTFS}/mnt/homeassistant_config
 }
+
+RPI_USE_U_BOOT = "1"

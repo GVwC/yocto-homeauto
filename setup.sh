@@ -63,6 +63,7 @@ bitbake-layers show-layers | grep -q "meta-python" || bitbake-layers add-layer .
 bitbake-layers show-layers | grep -q "meta-filesystems" || bitbake-layers add-layer ../meta-openembedded/meta-filesystems
 bitbake-layers show-layers | grep -q "meta-virtualization" || bitbake-layers add-layer ../meta-virtualization
 bitbake-layers show-layers | grep -q "meta-raspberrypi" || bitbake-layers add-layer ../meta-raspberrypi
+bitbake-layers show-layers | grep -q "meta-lts-mixins" || bitbake-layers add-layer ../meta-lts-mixins
 bitbake-layers show-layers | grep -q "meta-homeauto" || bitbake-layers add-layer ../meta-homeauto
 
 echo ""
