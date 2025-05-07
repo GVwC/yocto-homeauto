@@ -8,6 +8,8 @@ IMAGE_FEATURES += "ssh-server-dropbear"
 IMAGE_INSTALL:append = " \
     docker-moby \
     homeassistant \
+    u-boot-fw-utils \
+    u-boot-env \
 "
 
 # Optional, but helps make the image more self-contained
