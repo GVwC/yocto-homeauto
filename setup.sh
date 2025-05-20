@@ -59,6 +59,7 @@ fi
 # --- Add all required meta-layers
 echo "➕ Adding Yocto layers if missing..."
 bitbake-layers show-layers | grep -q "meta-oe" || bitbake-layers add-layer ../meta-openembedded/meta-oe
+bitbake-layers show-layers | grep -q "meta-networking" || bitbake-layers add-layer ../meta-openembedded/meta-networking
 bitbake-layers show-layers | grep -q "meta-python" || bitbake-layers add-layer ../meta-openembedded/meta-python
 bitbake-layers show-layers | grep -q "meta-filesystems" || bitbake-layers add-layer ../meta-openembedded/meta-filesystems
 bitbake-layers show-layers | grep -q "meta-virtualization" || bitbake-layers add-layer ../meta-virtualization
