@@ -2,7 +2,7 @@
 
 SUMMARY = "Runs Home Assistant container on system boot"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://homeassistant.service;md5=0a00c6eb28a50149ec74927d513a5400"
+LIC_FILES_CHKSUM = "file://homeassistant.service;md5=256c8d5ccb90db9f19018065c404a6ff"
 
 SRC_URI += "file://homeassistant.service"
 

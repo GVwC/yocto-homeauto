@@ -10,7 +10,7 @@ ExecStartPre=-/usr/bin/docker rm -f homeassistant
 ExecStart=/usr/bin/docker run --name homeassistant \
     --privileged \
     --restart=unless-stopped \
-    -e TZ=Canada/Mountain \
+    -e TZ=Europe/Vilnius \
     -v /mnt/homeassistant_config:/config \
     -v /run/dbus:/run/dbus:ro \
     --network=host \
