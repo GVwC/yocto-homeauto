@@ -3,6 +3,7 @@ tmp/
 downloads/
 sstate-cache/
 .cache/
+.vscode/
 *.swp
 *.sdimg
 *.wic
