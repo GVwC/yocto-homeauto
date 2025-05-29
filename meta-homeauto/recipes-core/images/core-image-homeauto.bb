@@ -6,7 +6,6 @@ inherit core-image
 # Enable useful runtime tools and SSH access
 IMAGE_FEATURES += "ssh-server-dropbear package-management"
 
-# Install critical packages
 IMAGE_INSTALL:append = " \
     docker-moby \
     homeassistant \
@@ -26,9 +25,7 @@ IMAGE_INSTALL:append = " \
     rsyslog \
     logrotate \
     ca-certificates \
-    wireless-tools \
     wpa-supplicant \
-    crda \
 "
 
 # Add extra system support features
