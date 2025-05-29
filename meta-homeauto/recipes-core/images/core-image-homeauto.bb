@@ -7,8 +7,9 @@ inherit core-image
 IMAGE_FEATURES += "ssh-server-dropbear"
 
 IMAGE_INSTALL:append = " \
-    docker-moby \
     homeassistant \
+    ssh-keys \  
+    docker-moby \
     u-boot-fw-utils \
     u-boot-env \
     tzdata \
