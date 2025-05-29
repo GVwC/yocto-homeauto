@@ -18,6 +18,3 @@
 	path = meta-lts-mixins
 	url = git://git.yoctoproject.org/meta-lts-mixins
 	branch = scarthgap/u-boot
-[submodule "meta-lts-mixins-temp"]
-	path = meta-lts-mixins-temp
-	url = https://github.com/mo-krauti/meta-lts-mixins
