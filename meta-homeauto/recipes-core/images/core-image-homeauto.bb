@@ -4,7 +4,7 @@ LICENSE = "MIT"
 inherit core-image
 
 # Enable useful runtime tools and SSH access
-IMAGE_FEATURES += "ssh-server-dropbear package-management"
+IMAGE_FEATURES += "ssh-server-dropbear"
 
 IMAGE_INSTALL:append = " \
     docker-moby \
