@@ -7,8 +7,8 @@ SRC_URI += "file://authorized_keys"
 S = "${WORKDIR}"
 
 do_install() {
-    install -d ${D}/etc/dropbear/root/.ssh
-    install -m 0644 ${WORKDIR}/authorized_keys ${D}/etc/dropbear/root/.ssh/authorized_keys
+    install -d ${D}/root/.ssh
+    install -m 0644 ${WORKDIR}/authorized_keys ${D}/root/.ssh/authorized_keys
 }
 
-FILES:${PN} += "/etc/dropbear/root/.ssh/authorized_keys"
+FILES:${PN} += "/root/.ssh/authorized_keys"
