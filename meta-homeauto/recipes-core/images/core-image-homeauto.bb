@@ -10,6 +10,7 @@ IMAGE_INSTALL:append = " \
     homeassistant \
     ssh-keys \  
     docker-moby \
+    docker-compose \
     u-boot-fw-utils \
     u-boot-env \
     tzdata \
@@ -34,13 +35,6 @@ DISTRO_FEATURES:append = " virtualization systemd"
 
 # Allocate extra space for Docker and configs
 IMAGE_ROOTFS_EXTRA_SPACE = "102400"
-
-# Pre-create persistent config dir for Home Assistant
-ROOTFS_POSTPROCESS_COMMAND:append = " create_homeassistant_config_dir; "
-create_homeassistant_config_dir() {
-    mkdir -p ${IMAGE_ROOTFS}/mnt/homeassistant_config
-    chown root:root ${IMAGE_ROOTFS}/mnt/homeassistant_config
-}
 
 # Use U-Boot for RPi
 RPI_USE_U_BOOT = "1"

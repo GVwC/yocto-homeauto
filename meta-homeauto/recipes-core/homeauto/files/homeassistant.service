@@ -1,21 +1,12 @@
 [Unit]
-Description=Home Assistant in Docker
+Description=Home Assistant via Docker Compose
 Requires=docker.service
 After=network-online.target docker.service
-StartLimitIntervalSec=0
 
 [Service]
-Restart=always
-ExecStartPre=-/usr/bin/docker rm -f homeassistant
-ExecStart=/usr/bin/docker run --name homeassistant \
-    --privileged \
-    --restart=unless-stopped \
-    -e TZ=Europe/Vilnius \
-    -v /mnt/homeassistant_config:/config \
-    -v /run/dbus:/run/dbus:ro \
-    --network=host \
-    ghcr.io/home-assistant/home-assistant:stable
-ExecStop=/usr/bin/docker stop homeassistant
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/containers/start-homeassistant.sh
 
 [Install]
 WantedBy=multi-user.target
