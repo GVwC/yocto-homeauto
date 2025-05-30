@@ -34,7 +34,7 @@ IMAGE_INSTALL:append = " \
 DISTRO_FEATURES:append = " virtualization systemd"
 
 # Allocate extra space for Docker and configs
-IMAGE_ROOTFS_EXTRA_SPACE = "102400"
+IMAGE_ROOTFS_EXTRA_SPACE = "4194304"
 
 # Use U-Boot for RPi
 RPI_USE_U_BOOT = "1"
