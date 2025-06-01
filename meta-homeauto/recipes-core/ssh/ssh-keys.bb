@@ -1,6 +1,6 @@
 SUMMARY = "Add SSH public key for root"
 LICENSE = "MIT"
-LIC_FILES_CHKSUM = "file://authorized_keys;md5=bb455feb780167dc52157adf7da3bedd"
+LIC_FILES_CHKSUM = "file://authorized_keys;md5=d3ea1bd3e57bb95f78f830df137f27b7"
 
 SRC_URI += "file://authorized_keys"
 
