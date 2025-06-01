@@ -5,7 +5,7 @@ inherit core-image
 
 # Enable useful runtime tools and SSH access
 IMAGE_FEATURES += "ssh-server-dropbear"
-
+IMAGE_FSTYPES = "wic"
 IMAGE_INSTALL:append = " \
     homeassistant \
     ssh-keys \  
